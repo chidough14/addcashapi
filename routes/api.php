@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,10 @@ Route::put('/editStock/{id}', [StockController::class, 'editStock']);
 //delete stock
 Route::delete('/deleteStock/{id}', [StockController::class, 'deleteStock']);
 
+
+//create client
+Route::post('/client', [ClientController::class, 'addClient']);
+
+//get all client
+Route::get('/clients', [ClientController::class, 'getClients']);
 

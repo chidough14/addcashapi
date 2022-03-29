@@ -16,6 +16,8 @@ class Purchase extends Model
         'purchase_price'
     ];
 
+    protected $primaryKey = 'client_id';
+
 
     public function client()
     {

@@ -42,6 +42,7 @@ class PurchaseController extends Controller
     
            $p['client'] = $p->client;
            $p['current_price'] = $stock->unit_price;
+           $p['company_name'] = $stock->name;
 
            $gain_loss = ($p->volume * $stock->unit_price ) - ($p->volume * $p->purchase_price);
 

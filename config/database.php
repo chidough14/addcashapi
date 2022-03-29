@@ -86,7 +86,6 @@ return [
 
         'pgsql_production' => [
             'driver' => 'pgsql',
-            'url' => $url,
             'host' => $host,
             'database' => $database,
             'username' => $username,

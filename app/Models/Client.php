@@ -12,4 +12,9 @@ class Client extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function purchases()
+    {
+        return $this->hasMany('App\Models\Purchase');
+    }
 }

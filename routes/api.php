@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,11 @@ Route::post('/client', [ClientController::class, 'addClient']);
 
 //get all client
 Route::get('/clients', [ClientController::class, 'getClients']);
+
+
+//create purchase
+Route::post('/purchase', [PurchaseController::class, 'addPurchase']);
+
+//get client purchase
+Route::get('/purchases/{client_id}', [PurchaseController::class, 'getPurchase']);
 
